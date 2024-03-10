@@ -1,0 +1,61 @@
+<!-- templates/index.html (Frontend) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text-to-Speech Converter</title>
+    <link rel="stylesheet" href="index.css"/>
+</head>
+<body>
+    <h1>Text-to-Speech Converter</h1>
+    <form action="/convert" method="post">
+        <label for="text_to_say">Enter text:</label>
+        <input type="text" name="text_to_say" id="text_to_say" required>
+        
+        <label for="language">Select language:</label>
+        <select name="language" id="language">
+            <option value="English">English</option>
+            <option value="Spanish">Spanish</option>
+            <option value="French">French</option>
+            <option value="Tamil">Tamil</option>
+            <option value="Hindi">Hindi</option>
+            <option value="Telugu">Telugu</option>
+            <option value="Malayalam">Malayalam</option>
+            <!-- Add more language options here -->
+        </select>
+        
+        <button type="submit">Convert to Speech</button>
+    </form>
+    
+    <audio controls id="audioPlayer">
+        <!-- The audio will be played here -->
+    </audio>
+
+    <script>
+        document.querySelector('form').addEventListener('submit', async function (event) {
+            event.preventDefault();
+            const formData = new FormData(this);
+
+            try {
+                const response = await fetch('/convert', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                if (!response.ok) {
+                    throw new Error(`Server responded with ${response.status}`);
+                }
+
+                const blob = await response.blob();
+                const audioPlayer = document.getElementById('audioPlayer');
+                audioPlayer.src = URL.createObjectURL(blob);
+                audioPlayer.play();
+            } catch (error) {
+                console.error('Error:', error.message);
+            }
+        });
+    </script>
+</body>
+</html>
