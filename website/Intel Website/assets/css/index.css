@@ -1,0 +1,145 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.background {
+  display: flex;
+  margin-top:30px;
+  justify-content: center;
+  border:1px dotted;
+  align-items: center;
+}
+
+.container {
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.forecast-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.forecast-item {
+  flex: 0 0 calc(20% - 20px);
+  border-radius: 8px;
+  border:1px solid darkgrey;
+  background-color: #f7f7f7;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+p {
+  font-size: 1em;
+  margin: 5px 0;
+  color: #777;
+}
+
+.weather-icon {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+  
+  /* Add more styles as needed */
+
+  .scale {
+    width: 90%;
+    margin-top:50px;
+    margin-left:65px;
+    
+  }
+.scale h2,p{
+  text-align:center;  
+}
+  .rowwise {
+    display: flex;
+    width: 100%;
+    height: 33.33%;
+  }
+  .column p{
+    font-size: 16px;
+  }
+  .column img{
+    width:38px;
+    height:67px;
+  }
+  .column {
+    flex: 1;
+    display:flex; 
+    justify-content: center;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius:10px;
+    padding: 10px;
+    margin:10px;
+    background-color:transparent;
+    box-shadow: 0px 0px 16px rgb(128, 128, 128)
+  }
+
+.col-img{
+  width:100px;
+  height:400px;
+  }
+/* app show */
+
+.app-show{
+  height:400px;
+  background-color:#f2f2f2;
+  display: flex;
+  margin:50px 0px;
+
+}
+.app-show img{
+  height:400px;
+  width:200px;
+  margin-left:100px;
+}
+.app-detail{
+  text-align: center;
+  margin-left: 100px;
+}
+.app-detail img{
+  margin-top:20px;
+  width:180px;  
+  height:60px;
+}
+.footer{
+  background-color:lightgray;
+  height:200px;
+  display: flex;
+}
+.foo-content{
+  width:25%;
+  height:200px;
+  text-align:center;
+}
+.foo-content p{
+  margin-bottom:0px;
+  padding:8px;
+  color:black;
+}
+.foo-content a{
+  text-decoration: none;
+  color:black;
+}

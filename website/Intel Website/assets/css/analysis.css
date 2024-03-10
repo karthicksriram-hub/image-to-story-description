@@ -1,0 +1,28 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  color: #111;
+  font-family: 'Montserrat', sans-serif;
+} 
+.charts-card {
+  background-color: #fff;
+  margin-bottom: 20px;
+  padding: 25px;
+  box-sizing: border-box;
+  -webkit-column-break-inside: avoid;
+  border-radius: 5px;
+  box-shadow: 0 6px 7px -4px rgba(0, 0, 0, 0.2);
+}
+
+.chart-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 1080px) {
+  .charts-card {
+    padding:0px;
+  }
+}
