@@ -29,7 +29,7 @@ Language Selection: Users can choose their preferred language for both the gener
 Clone this repository to your local machine.
 bash
 Copy code
-git clone https://github.com/yourusername/imagetostory.git
+**git clone**: https://github.com/karthicksriram-hub/image-to-story-description/tree/main
 Install the required dependencies.
 Copy code
 pip install -r requirements.txt
